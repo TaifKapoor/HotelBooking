@@ -1,0 +1,282 @@
+/* Base styles (mobile-first) */
+.my-bookings-container {
+  padding: 4rem 0.5rem 1rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.bookings-list {
+  max-width: 72rem;
+  margin: 1.5rem auto 0;
+  width: 100%;
+  color: #1f2937;
+}
+
+.bookings-header {
+  display: none;
+  grid-template-columns: 3fr 2fr 1fr;
+  width: 100%;
+  border-bottom: 1px solid #d1d5db;
+  font-weight: 500;
+  padding: 0.75rem 0;
+  position: sticky;
+  top: 4rem;
+  background-color: white;
+  z-index: 10;
+}
+
+.header-item {
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+  text-align: left;
+}
+
+.booking-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  border-bottom: 1px solid #d1d5db;
+  padding: 1rem 0;
+}
+
+.booking-item:first-child {
+  border-top: 1px solid #d1d5db;
+}
+
+.hotel-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hotel-image {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.hotel-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  margin-top: 0.75rem;
+}
+
+.hotel-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+}
+
+.room-type {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+}
+
+.hotel-address,
+.hotel-guests {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+  color: #6b7280;
+}
+
+.hotel-total {
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+.date-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.date-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.date-text {
+  color: #6b7280;
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+}
+
+.payment-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 0.75rem;
+}
+
+.payment-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+}
+
+.status-paid {
+  background-color: #22c55e;
+}
+
+.status-unpaid {
+  background-color: #ef4444;
+}
+
+.status-text {
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+}
+
+.pay-button {
+  padding: 0.5rem 1rem;
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+  margin-top: 0.75rem;
+  border: 1px solid #9ca3af;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  background-color: white;
+  touch-action: manipulation; /* Improves touch interaction */
+}
+
+.pay-button:hover {
+  background-color: #f9fafb;
+}
+
+/* Medium screens (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .my-bookings-container {
+    padding: 5rem 2rem 2rem;
+  }
+
+  .bookings-header {
+    display: grid;
+  }
+
+  .booking-item {
+    grid-template-columns: 3fr 2fr 1fr;
+    padding: 1.5rem 0;
+  }
+
+  .hotel-details {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hotel-image {
+    width: 11rem;
+    max-height: 7rem;
+  }
+
+  .hotel-info {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+
+  .hotel-name {
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
+  }
+
+  .date-info {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 0;
+  }
+
+  .date-row {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .payment-status {
+    align-items: center;
+  }
+
+  .pay-button {
+    margin-top: 0;
+  }
+}
+
+/* Large screens (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .my-bookings-container {
+    padding: 5rem 4rem 2rem;
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  .bookings-list {
+    margin-top: 2rem;
+  }
+
+  .hotel-image {
+    max-height: 8rem;
+  }
+
+  .date-info {
+    gap: 3rem;
+  }
+}
+
+/* Extra-large screens (1280px and up) */
+@media (min-width: 1280px) {
+  .my-bookings-container {
+    padding: 5rem 6rem 2rem;
+  }
+
+  .hotel-image {
+    max-height: 9rem;
+  }
+}
+
+/* Small screens (below 480px) */
+@media (max-width: 480px) {
+  .my-bookings-container {
+    padding: 3rem 0.5rem 1rem;
+  }
+
+  .bookings-list {
+    margin-top: 1rem;
+  }
+
+  .booking-item {
+    padding: 0.75rem 0;
+  }
+
+  .hotel-image {
+    max-height: 150px;
+  }
+
+  .hotel-name {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+  }
+
+  .room-type,
+  .hotel-address,
+  .hotel-guests,
+  .date-text,
+  .status-text {
+    font-size: 0.75rem;
+  }
+
+  .hotel-total {
+    font-size: 0.875rem;
+  }
+
+  .pay-button {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}

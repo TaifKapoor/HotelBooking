@@ -1,0 +1,157 @@
+.exclusive-offers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  padding-top: 5rem;
+  padding-bottom: 7.5rem;
+}
+
+.exclusive-offers-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.view-all-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.arrow-icon {
+  transition: transform 0.2s ease;
+}
+
+.view-all-button:hover .arrow-icon {
+  transform: translateX(0.25rem);
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.offer-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.25rem;
+  padding: 1rem;
+  padding-top: 3rem;
+  border-radius: 0.75rem;
+  color: var(--white-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.offer-discount {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--white-color);
+  color: #1f2937;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.offer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.offer-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.offer-description {
+  font-size: 1rem;
+}
+
+.offer-expiry {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.75rem;
+}
+
+.offer-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  padding: 0;
+  color: var(--white-color);
+}
+
+.offer-arrow-icon {
+  filter: invert(1);
+  transition: var(--transition-slow);
+}
+
+.offer-button:hover .offer-arrow-icon {
+  transform: translateX(0.25rem);
+}
+
+@media (min-width: 768px) {
+  .exclusive-offers {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .exclusive-offers-header {
+    flex-direction: row;
+  }
+
+  .view-all-button {
+    margin-top: 3rem;
+  }
+
+  .offers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .offer-card {
+    padding-top: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .exclusive-offers {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .offers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .exclusive-offers {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}

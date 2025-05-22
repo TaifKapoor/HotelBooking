@@ -1,0 +1,252 @@
+.blog-section {
+  padding: 3rem 0;
+  margin-top: 70px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.section-title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.blog-wrapper {
+  margin-top: 3rem;
+
+}
+
+.blog-column {
+  width: 100%;
+  padding: 0 15px;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .blog-column {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .blog-column {
+    width: 33.333%;
+  }
+}
+
+.blog-item {
+  background-color: var(--white-color);
+}
+
+.blog-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.blog-image:hover .blog-img {
+  transform: scale(1.1);
+}
+
+.blog-content {
+  padding: 20px;
+  position: relative;
+  border: 1px solid var(--black-color);
+}
+
+.blog-date {
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  background-color: #8b5a2b;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 12px 16px;
+  border-radius: 0.25rem;
+}
+
+.blog-title {
+  padding-top: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #333;
+  margin-top: 1rem;
+  margin-bottom: 20px;
+}
+
+.blog-text {
+  padding-top: 20px;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 35px;
+}
+
+.blog-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #333;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.blog-btn:hover {
+  color: #555;
+}
+
+/* guestSay */
+
+.guest {
+  padding-left: 70px;
+  padding-right: 70px;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.guest-section {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  background-color: #f9f5f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.guest-content {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.guest-content h1 {
+  font-size: 48px;
+  color: #5c4033;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+}
+
+.guest-review {
+  margin-bottom: 20px;
+}
+
+.guest-review p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.guest-review .author {
+  font-weight: bold;
+  color: #5c4033;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.guest-image {
+  width: 50%;
+  background-image: url(src/assets/regImage.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1024px) {
+  .guest-content {
+    padding: 30px;
+  }
+
+  .guest-content h1 {
+    font-size: 40px;
+  }
+
+  .guest-review p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .guest-section {
+    flex-direction: column;
+    width: 95%;
+    min-height: 800px;
+  }
+
+  .guest-content,
+  .guest-image {
+    width: 100%;
+  }
+
+  .guest-image {
+    height: 300px;
+    /* छोटी स्क्रीन पर इमेज की ऊंचाई सेट की */
+  }
+
+  .guest-content {
+    padding: 20px;
+  }
+
+  .guest-content h1 {
+    font-size: 32px;
+  }
+
+  .guest-review p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .guest-section {
+    flex-direction: column;
+    width: 95%;
+    min-height: 600px;
+  }
+
+  .guest-content {
+    padding: 15px;
+  }
+
+  .guest-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .guest-review p {
+    font-size: 12px;
+  }
+
+  .guest-review {
+    margin-bottom: 15px;
+  }
+
+  .guest-image {
+    height: 250px;
+    /* बहुत छोटी स्क्रीन पर इमेज की ऊंचाई कम की */
+  }
+}
